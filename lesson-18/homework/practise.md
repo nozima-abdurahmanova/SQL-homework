@@ -280,5 +280,5 @@ TestCase    VARCHAR(100) NULL
 
 INSERT INTO Gaps (RowNumber, TestCase) VALUES
 (1,'Alpha'),(2,NULL),(3,NULL),(4,NULL),
-(5,'Bravo'),(6,NULL),(7,'Charlie'),(8,NULL),(9,NULL);
+(5,'Bravo'),(6,NULL),(7,NULL),(8,NULL),(9,NULL),(10,'Charlie'), (11, NULL), (12, NULL)
 ```
