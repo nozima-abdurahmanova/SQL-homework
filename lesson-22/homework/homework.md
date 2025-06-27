@@ -122,62 +122,20 @@ INSERT INTO OneColumn VALUES (10), (20), (30), (40), (100);
 ```
 ---
 
-14. **Generate row numbers for the given data. The condition is that the first row number for every partition should be odd number.For more details please check the sample input and expected output.**
-
-```sql
-CREATE TABLE Row_Nums (
-    Id INT,
-    Vals VARCHAR(10)
-);
-INSERT INTO Row_Nums VALUES
-(101,'a'), (102,'b'), (102,'c'), (103,'f'), (103,'e'), (103,'q'), (104,'r'), (105,'p');
-```
-
-**Sample Input**
-```
-| Id  | Vals |  
-|-----|------|  
-| 101 |    a |  
-| 102 |    b |  
-| 102 |    c |  
-| 103 |    f |  
-| 103 |    e |  
-| 103 |    q |  
-| 104 |    r |  
-| 105 |    p |
-```
-
-
-
-**Expected Output**
-```
-| Id  | Vals | RowNumber |
-|-----|------|-----------|
-| 101 | a    | 1         |
-| 102 | b    | 3         |
-| 102 | c    | 4         |
-| 103 | f    | 5         |
-| 103 | e    | 6         |
-| 103 | q    | 7         |
-| 104 | r    | 9         |
-| 105 | p    | 11        |
-```
----
-
-15. **Find customers who have purchased items from more than one product_category**
-16. **Find Customers with Above-Average Spending in Their Region**
-17. **Rank customers based on their total spending (total_amount) within each region. If multiple customers have the same spending, they should receive the same rank.**
-18. **Calculate the running total (cumulative_sales) of total_amount for each customer_id, ordered by order_date.**
-19. **Calculate the sales growth rate (growth_rate) for each month compared to the previous month.**
-20. **Identify customers whose total_amount is higher than their last order''s total_amount.(Table sales_data)**
+14. **Find customers who have purchased items from more than one product_category**
+15. **Find Customers with Above-Average Spending in Their Region**
+16. **Rank customers based on their total spending (total_amount) within each region. If multiple customers have the same spending, they should receive the same rank.**
+17. **Calculate the running total (cumulative_sales) of total_amount for each customer_id, ordered by order_date.**
+18. **Calculate the sales growth rate (growth_rate) for each month compared to the previous month.**
+19. **Identify customers whose total_amount is higher than their last order''s total_amount.(Table sales_data)**
 
 ---
 
 ## Hard Questions
 
-21. **Identify Products that prices are above the average product price**
+20. **Identify Products that prices are above the average product price**
 
-22. **In this puzzle you have to find the sum of val1 and val2 for each group and put that value at the beginning of the group in the new column. The challenge here is to do this in a single select. For more details please see the sample input and expected output.**
+21. **In this puzzle you have to find the sum of val1 and val2 for each group and put that value at the beginning of the group in the new column. The challenge here is to do this in a single select. For more details please see the sample input and expected output.**
 
 ```sql
 CREATE TABLE MyData (
@@ -211,7 +169,7 @@ INSERT INTO MyData VALUES
 ```
 ---
 
-23. **Here you have to sum up the value of the cost column based on the values of Id. For Quantity if values are different then we have to add those values.Please go through the sample input and expected output for details.**
+22. **Here you have to sum up the value of the cost column based on the values of Id. For Quantity if values are different then we have to add those values.Please go through the sample input and expected output for details.**
 
 ```sql
 CREATE TABLE TheSumPuzzle (
@@ -242,7 +200,7 @@ INSERT INTO TheSumPuzzle VALUES
 ```
 ---
 
-24. **From following set of integers, write an SQL statement to determine the expected outputs**
+23. **From following set of integers, write an SQL statement to determine the expected outputs**
 
 ```sql
 CREATE TABLE Seats 
@@ -267,34 +225,3 @@ INSERT INTO Seats VALUES
 ---------------------
 ```
 
-
-
-25. **In this puzzle you need to generate row numbers for the given data. The condition is that the first row number for every partition should be even number.For more details please check the sample input and expected output.**
-
-**Sample Input**
-```
-| Id  | Vals |
-|-----|------|
-| 101 | a    |
-| 102 | b    |
-| 102 | c    |
-| 103 | f    |
-| 103 | e    |
-| 103 | q    |
-| 104 | r    |
-| 105 | p    |
-```
-
-**Expected Output**
-```
-| Id  | Vals | Changed |
-|-----|------|---------|
-| 101 | a    | 2       |
-| 102 | b    | 4       |
-| 102 | c    | 5       |
-| 103 | e    | 7       |
-| 103 | f    | 8       |
-| 103 | q    | 9       |
-| 104 | r    | 11      |
-| 105 | p    | 13      |
-```
